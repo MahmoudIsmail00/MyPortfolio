@@ -1,3 +1,6 @@
+using InfraStructure;
+using Microsoft.EntityFrameworkCore;
+
 namespace Web
 {
     public class Program
@@ -8,6 +11,9 @@ namespace Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<DataContext>(options =>
+                options.UseSqlServer("Data Source=MAHMOUD\\SQLEXPRESS;Initial Catalog=PortfolioDB;Integrated Security=True")
+            ); ;
 
             var app = builder.Build();
 
