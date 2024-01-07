@@ -37,6 +37,60 @@ namespace InfraStructure
                     Address ="Cairo"
                 }
                 );
+            modelBuilder.Entity<PortfolioItem>().HasData(
+                new PortfolioItem
+                {
+                    Id = Guid.NewGuid(),
+                    Description = "Playstation store app",
+                    ImageUrl = "gps.png",
+                    ProjectName = "Playstation"
+                    
+                });
+            modelBuilder.Entity<PortfolioItem>().HasData(
+                new PortfolioItem
+                {
+                    Id = Guid.NewGuid(),
+                    Description = "Dummy data",
+                    ImageUrl = "flappy.png",
+                    ProjectName = "Home"
+
+                });
+            modelBuilder.Entity<PortfolioItem>().HasData(
+                new PortfolioItem
+                {
+                    Id = Guid.NewGuid(),
+                    Description = "Ocean",
+                    ImageUrl = "ecole.png",
+                    ProjectName = "Sea"
+
+                });
+            modelBuilder.Entity<PortfolioItem>().HasData(
+                new PortfolioItem
+                {
+                    Id = Guid.NewGuid(),
+                    Description = "Some dummy data",
+                    ImageUrl = "instagram.png",
+                    ProjectName = "bla bla"
+
+                });
+            modelBuilder.Entity<PortfolioItem>().HasData(
+                new PortfolioItem
+                {
+                    Id = Guid.NewGuid(),
+                    Description = "Video Rental App",
+                    ImageUrl = "commercial.png",
+                    ProjectName = "Vidly"
+
+                }) ;
+            modelBuilder.Entity<PortfolioItem>().HasData(
+                new PortfolioItem
+                {
+                    Id = Guid.NewGuid(),
+                    Description = "BookStore App",
+                    ImageUrl = "angry.png",
+                    ProjectName = "Bookly"
+
+                });
             base.OnModelCreating(modelBuilder);
 
         }

@@ -38,11 +38,7 @@ namespace InfraStructure.Migrations
                     table.PrimaryKey("PK_PortfolioItems", x => x.Id);
                 });
 
-            migrationBuilder.InsertData(
-                table: "Owner",
-                columns: new[] { "Id", "Address", "Avatar", "FullName", "Profile" },
-                values: new object[] { new Guid("cb14c580-dd0f-4af6-b9dc-73bba8108193"), "Cairo", "avatar.jpg", "MahmoudIsmail", ".Net Core Developer" });
-        }
+             }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
