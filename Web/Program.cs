@@ -1,4 +1,6 @@
+using Core.Intrfaces;
 using InfraStructure;
+using InfraStructure.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 
 namespace Web
@@ -14,7 +16,7 @@ namespace Web
             builder.Services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer("Data Source=MAHMOUD\\SQLEXPRESS;Initial Catalog=PortfolioDB;Integrated Security=True")
             ); ;
-
+            builder.Services.AddScoped(typeof(IUnitOfWork<>),typeof(UnitOfWork<>));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

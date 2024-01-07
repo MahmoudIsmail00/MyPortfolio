@@ -1,5 +1,6 @@
 ﻿using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace InfraStructure
     public class DataContext : DbContext
     {
         public DataContext():base()
+        { }
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         { }
 
         public DbSet<Owner> Owner { get; set; }
